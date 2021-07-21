@@ -31,6 +31,13 @@ let themeSelects = document.querySelectorAll('.theme-select');
 $('.theme-select').on('click', function(){
     for (let el of themeSelects){
         el.classList.remove('selected-theme');
-        this.classList.add('selected-theme');
     }
+    this.classList.add('selected-theme');
+
+    if (this.id === 'indigo') {
+        preview[0].classList.value = 'preview-wrapper indigo-theme';
+    } else {
+        preview[0].classList.value = 'preview-wrapper black-theme';
+    }
+
 });
